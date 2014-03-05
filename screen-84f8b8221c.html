@@ -28,9 +28,9 @@
       $(document).ready(function(){
         $(".inline").colorbox({inline:true, width:"80%", height:"75%"});
         $(".inline_birthday").colorbox({inline:true});
-        $(".voucher_trigger").colorbox({inline:true, width:"70%"});
-        $(".brand_recommendation_trigger").colorbox({inline:true, width:"70%"});
-        $(".contribution_trigger").colorbox({inline:true, width:"70%"});
+        $(".voucher_trigger").colorbox({inline:true, width:"80%"});
+        $(".brand_recommendation_trigger").colorbox({inline:true, width:"80%"});
+        $(".contribution_trigger").colorbox({inline:true, width:"80%"});
 
 
           
@@ -50,6 +50,7 @@
     <script type="text/javascript">
       $(document).ready(function() {
         $('.slider1').bxSlider({slideWidth: 105,minSlides: 2,maxSlides: 4,moveSlides: 1,slideMargin: 30});
+        $('.slider_videoframe').bxSlider({slideWidth: 105,minSlides: 1,maxSlides: 1,moveSlides: 1,slideMargin: 30});
       });
     </script>
     <script type="text/javascript">
@@ -286,7 +287,29 @@
 
                       <h4>Passion Ride <span class="font-bold">40 km | </span>Green Ride <span class="font-bold">20 km | </span>Fun Ride <span class="font-bold">10 km</span></h4>
                     </div>
-            </div>
+
+
+
+              <!-- this part is not completed yet -->
+              <div class="slider1">
+                <div class="slide">
+                  <div class="video_holder">
+                    <!-- <iframe src="//www.youtube.com/embed/UWb5Qc-fBvk" frameborder="0" allowfullscreen></iframe> -->
+                    <video controls autoplay>
+                      <source src="img/movie.mov" type="video/mov">
+                      
+                      <object data="movie.mov" width="320" height="240">
+                        <embed width="320" height="240" src="movie.mov">
+                      </object>
+                    </video>
+                  </div>
+                </div>
+                <div class="slide">
+                      
+                </div>
+                
+                </div>
+              </div>
 
 
           </div>
@@ -747,7 +770,7 @@
               <hr id="hr-voucher">
               <div class="btn-grp">
                 <span class="btn-shadow" style="width:auto;"><button type="button" class="btn btn-primary btn-lg">Send Voucher</button></span>
-                <button type="button" href="#pop_birthday_recommendation" class="brand_recommendation_trigger btn btn-lg btn-default">or choose from brand catalogue</button>
+                <button type="button" href="#pop_birthday_recommendation" class="brand_recommendation_trigger btn btn-lg btn-default btn-def">or choose from brand catalogue</button>
               </div>
             </div>
           </div>
@@ -905,7 +928,7 @@
               </div>
               <hr id="hr-voucher">
               <div class="btn-grp">
-                <button type="button" class="btn btn-lg btn-default">Dismiss</button>
+                <button type="button" class="btn btn-lg btn-default btn-def">Dismiss</button>
                 <span class="btn-shadow" style="width:auto;"><button type="button" href="#pop_birthday_contribution" class="contribution_trigger btn btn-primary btn-lg">Recommend and advance</button></span>
               </div>
             </div>
@@ -957,7 +980,8 @@
               
             </div>
             <div class="pop_voucher_vault" style="width:63%;">
-              <h3 class="pop_event_title font-blue">Contribute and shout out!</h3>
+              <form id="#form-contribute">
+                <h3 class="pop_event_title font-blue">Contribute and shout out!</h3>
               <div class="div-amount">
                 <img src="img/rupee.png">
                 <input type="text" placeholder="Enter Amount">
@@ -975,9 +999,11 @@
               </div>
               <hr id="hr-voucher">
               <div class="btn-grp">
-                <button type="button" class="btn btn-lg btn-default">Not now</button>
+                <button type="button" class="btn btn-lg btn-default btn-def">Not now</button>
                 <span class="btn-shadow" style="width:auto;"><button type="button" href="#" class="btn btn-primary btn-lg">Pay</button></span>
               </div>
+              </form>
+              
             </div>
           </div>
         </div>

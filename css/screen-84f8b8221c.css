@@ -115,6 +115,9 @@ body{margin-bottom:0px;}
 .btn-default{background-color:rgba(255,255,255,0);border-color:#000;color:#000;}
 .btn-default:hover{background-color:rgba(255,255,255,0);border-color:#fff;color:#fff;}
 
+
+.btn-def:hover{background-color:rgba(255,255,255,0) !important;border-color:#000 !important;color:#000 !important;}
+
 /*newly added end*/
 
 /* mixitup filtering */

@@ -20,7 +20,7 @@
     Change the following styles to modify the appearance of Colorbox.  They are
     ordered & tabbed in a way that represents the nesting of the generated HTML.
 */
-/*#cboxOverlay{background:#fff;}*/
+#cboxOverlay{background:#2e2e2e;}
 #colorbox{outline:0;}
     #cboxTopLeft{width:25px; height:25px; background:url(images/border1.png) no-repeat 0 0;}
     #cboxTopCenter{height:25px; background:url(images/border1.png) repeat-x 0 -50px;}
@@ -110,7 +110,7 @@ text-align: left;}
 
 
 /********************** css added for pop flow events ************************/
-a:focus {outline: none;}
+/*a:focus {outline: none;}*/
 /*.has_recommended_img1{float: left;}
 .has_recommended_img2{float: right;}*/
 .pop_has_recommended{width: 309px;}
@@ -128,7 +128,9 @@ a.voucher_active:active .voucher, a.brand_active:active .brand{ border: 5px soli
 .div-amount input, .div-amount textarea{background-color: #f2f2f2;border:0px;padding: 10px;}
 
 
-
+/*********************** css for video *********************************************/
+.video_holder{width: 300px;}
+.video_holder video{width: 100%;}
 
 
 
