@@ -84,7 +84,7 @@ text-align: left;}
 .img-small-viewport img{height:100%;float: left;padding-right: 5px;}
 .pop_event_holder{}
 .pop_event_info{color: #000;display: table;padding: 20px;}
-.pop-event-outer{float: left;border-right: 1px solid rgba(0, 0, 0, 0.24);height: 430px;}
+.pop-event-outer{float: left;border-right: 1px solid rgba(0, 0, 0, 0.24);height: 430px;height: auto;}
 .pop_event_title{margin-top: 10px;}
 .pop-no-margin{margin: 0px !important;}
 #cboxContent{border-radius: 3px;-webkit-border-radius: 3px;-moz-border-radius: 3px;}
@@ -116,7 +116,7 @@ text-align: left;}
 .pop_has_recommended{width: 309px;}
 .no-wrap{white-space: nowrap;}
 .p_recommended{width: 170px;}
-.voucher{background-image: url(../img/bg-voucher.png);width: 150px;background-size: 100% 100%;height: 100px;padding: 10px;}
+.voucher{background-image: url(../img/bg-voucher.png);width: 150px;background-size: 100% 100%;height: 100px;padding: 10px;cursor: pointer;}
 #hr-voucher{position: relative;top: 40px;}
 .btn-grp{position: relative;top: 30px;float: right;padding: 10px;}
 .img-viewport-voucher{width: 55px;height: 65px;padding: 5px;}
@@ -129,9 +129,52 @@ a.voucher_active:active .voucher, a.brand_active:active .brand{ border: 5px soli
 
 
 /*********************** css for video *********************************************/
-.video_holder{width: 300px;}
+.video_holder{width: 250px;
+padding: 10px;
+float: left;
+border: 1px solid rgb(211, 204, 204);margin-right: 50px;}
 .video_holder video{width: 100%;}
+.event_more_info{margin: 30px 20px;}
+.patch-pop-event{background-image: url(../img/patch-pop-event.png);background-size: 100% 120% !important;height: 70px;
+padding: 15px 50px;
+-webkit-border-radius: 0 0 3px 3px;
+-moz-border-radius: 0 0 3px 3px;
+border-radius: 0 0 3px 3px;
+box-shadow: 0px 2px 4px rgba(80, 80, 80, 0.61);
+-moz-box-shadow: 0px 2px 4px rgba(80, 80, 80, 0.61);
+-webkit-box-shadow: 0px 2px 4px rgba(80, 80, 80, 0.61);
+width: 309px;
+margin-left: auto;
+margin-right: auto;
+color: #000;
+text-align: left;}
+.patch-pop-event button{margin-right: 5px;}
+#pop_event_birthday .pop-event-outer{height: 430px;}
 
+.pop_voucher_vault{display: table;}
+.pop_birthday_flow .pop-event-outer{height: auto;}
+
+#pop_birthday_voucher .pop-event-outer, .pop_voucher_vault{margin: 2%;}
+#pop_birthday_recommendation .pop-event-outer, #pop_birthday_contribution .pop-event-outer{margin: 2%;}
+
+
+/* for mobile only */
+@media (max-width: 767px) {
+    #pop_event .pop_event_holder { margin-left: auto; margin-right: auto; width: 325px; }
+    #btn-recommend-dismiss{margin: 10px;}
+}
+
+@media (min-width: 767px) {
+    #pop_birthday_contribution .pop_voucher_vault{width: 100%}
+    #btn-recommend-dismiss{margin: 10px;}
+    /*.pop-event-outer{height: auto;}*/
+}
+@media (min-width: 992px) {
+    #pop_birthday_contribution .pop_voucher_vault{width: 54%}
+}
+@media (min-width: 1200px) {
+    #pop_birthday_contribution .pop_voucher_vault{width: 63%}
+}
 
 
 
@@ -235,17 +278,17 @@ a.voucher_active:active .voucher, a.brand_active:active .brand{ border: 5px soli
 /* DIRECTION CONTROLS (NEXT / PREV) */
 
 .bx-wrapper .bx-prev {
-    left: 200px;
+    /*left: 200px;*/
     /*margin: 20px;*/
     margin-top: 20px;
-    background: url(https://s3.amazonaws.com/media.jetstrap.com/wqErEA0zS26OyIMLds5h_controls2.png) no-repeat 0 -32px;
+    background: url(../img/wqErEA0zS26OyIMLds5h_controls2.png) no-repeat 0 -32px;
 }
 
 .bx-wrapper .bx-next {
-    right: 200px;
+    /*right: 200px;*/
     /*margin: 20px;*/
     margin-top: 20px;
-    background: url(https://s3.amazonaws.com/media.jetstrap.com/wqErEA0zS26OyIMLds5h_controls2.png) no-repeat -43px 0px;
+    background: url(../img/wqErEA0zS26OyIMLds5h_controls2.png) no-repeat -43px 0px;
 }
 
 .bx-wrapper .bx-prev:hover {
@@ -283,7 +326,7 @@ a.voucher_active:active .voucher, a.brand_active:active .brand{ border: 5px soli
     width: 10px;
     height: 11px;
     outline: 0;
-    background: url(https://s3.amazonaws.com/media.jetstrap.com/uIjkU2IkRa2DNqP0vZf1_controls1.png) -86px -11px no-repeat;
+    background: url(../img/uIjkU2IkRa2DNqP0vZf1_controls1.png) -86px -11px no-repeat;
     margin: 0 3px;
 }
 
@@ -298,7 +341,7 @@ a.voucher_active:active .voucher, a.brand_active:active .brand{ border: 5px soli
     width: 9px;
     height: 11px;
     outline: 0;
-    background: url(https://s3.amazonaws.com/media.jetstrap.com/uIjkU2IkRa2DNqP0vZf1_controls1.png) -86px -44px no-repeat;
+    background: url(../img/uIjkU2IkRa2DNqP0vZf1_controls1.png) -86px -44px no-repeat;
     margin: 0 3px;
 }
 
@@ -348,13 +391,32 @@ a.voucher_active:active .voucher, a.brand_active:active .brand{ border: 5px soli
 .slide .bx-clone{width: auto !important;}
 div.slider1 > div.slide{width: auto !important;}
 
-@media (min-width: 992px and max-width: 1200px) {
+/* this is for slider navigation on mobiles*/
+    .bx-wrapper .bx-prev{left: 20px;}
+    .bx-wrapper .bx-next {left: 70px;}
+    #pop_birthday_recommendation .bx-wrapper .bx-prev{left: 20px;}
+    #pop_birthday_recommendation .bx-wrapper .bx-next{left: 70px;}
+
+@media (min-width: 767px) {
     .bx-wrapper .bx-prev{left: 120px;}
-    .bx-wrapper .bx-next {right: 120px;}
+    .bx-wrapper .bx-next {left: 170px;}
+    #pop_birthday_recommendation .bx-wrapper .bx-prev{left: 80px;}
+    #pop_birthday_recommendation .bx-wrapper .bx-next{left: 130px;}
 }
 
+@media (min-width: 992px) {
+    .bx-wrapper .bx-prev{left: 120px;}
+    .bx-wrapper .bx-next {left: 170px;}
+    #pop_birthday_recommendation .bx-wrapper .bx-prev{left: 120px;}
+    #pop_birthday_recommendation .bx-wrapper .bx-next{left: 170px;}
+}
 
-
+@media (min-width: 1200px) {
+    .bx-wrapper .bx-prev{left: 280px;}
+    .bx-wrapper .bx-next {left: 340px;}
+    #pop_birthday_recommendation .bx-wrapper .bx-prev{left: 280px;}
+    #pop_birthday_recommendation .bx-wrapper .bx-next{left: 340px;}
+}
 
 
 
@@ -377,7 +439,7 @@ div.slider1 > div.slide{width: auto !important;}
     padding: 0;
     width: 29px;
     height: 29px;
-    background: url(https://s3.amazonaws.com/media.jetstrap.com/201Fu7cQJO1J4AJBglX9_polaris1.png) no-repeat;
+    background: url(../img/201Fu7cQJO1J4AJBglX9_polaris1.png) no-repeat;
     border: none;
     cursor: pointer;
 }
@@ -423,7 +485,7 @@ div.slider1 > div.slide{width: auto !important;}
        only screen and (min-device-pixel-ratio: 1.5) {
     .icheckbox_polaris,
     .iradio_polaris {
-        background-image: url(https://s3.amazonaws.com/media.jetstrap.com/XBwL4JnRWiOvnCdW2Yqg_polaris@2x1.png);
+        background-image: url(../img/XBwL4JnRWiOvnCdW2Yqg_polaris@2x1.png);
         -webkit-background-size: 310px 31px;
         background-size: 310px 31px;
     }
@@ -438,3 +500,4 @@ height: 60px;
 background-color: #f2f2f2;    
 border:0px;
 }
+.icheckbox_polaris{vertical-align: top;float: left;}

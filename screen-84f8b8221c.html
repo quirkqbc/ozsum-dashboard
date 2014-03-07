@@ -49,8 +49,10 @@
     </script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $('.slider1').bxSlider({slideWidth: 105,minSlides: 2,maxSlides: 4,moveSlides: 1,slideMargin: 30});
-        $('.slider_videoframe').bxSlider({slideWidth: 105,minSlides: 1,maxSlides: 1,moveSlides: 1,slideMargin: 30});
+        $('.voucher-slider').bxSlider({slideWidth: 105,minSlides: 2,maxSlides: 3,moveSlides: 1,slideMargin: 220});
+        $('.brand-slider').bxSlider({slideWidth: 205,minSlides: 1,maxSlides: 3,moveSlides: 1,slideMargin: 10});
+        
+        // $('.slider_videoframe').bxSlider({slideWidth: 105,minSlides: 1,maxSlides: 1,moveSlides: 1,slideMargin: 30});
       });
     </script>
     <script type="text/javascript">
@@ -69,7 +71,6 @@
           <ul class="nav navbar-nav navbar-right">
             <li class="no-bg-color">
               <a id="notifier" href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <!-- <img src="https://s3.amazonaws.com/media.jetstrap.com/2ASYKp5Snie8iiMgdzEw_notification.png">-->
               </a>
               <ul class="dropdown-menu">
                 <li>
@@ -201,11 +202,13 @@
             </div>
           </a>
         </div>
+
+        <!-- this is the pop up window for community events -->
         <div style='display:none'>
           <div id='pop_event' class="event_popup">
             
             <div class="pop_event_holder">
-                    <div class="tile-event-outer pop-event-outer pop-no-margin">
+                    <div class="tile-event-outer pop-event-outer">
                       <div class="tile-event tile-event-pop">
                         <table>
                           <tbody>
@@ -256,10 +259,10 @@
                           </tbody>
                         </table>
                       </div>
-                      <div class="pop-event-patch patch-chipped">
+                      <div class="patch-pop-event">
                         <span class="btn-shadow"><button type="button" class="btn btn-primary btn-lg">Chip-in</button></span>
                         
-                        <button id="btn-dismiss" type="button" class="btn btn-default btn-lg">Dismiss</button>
+                        <button id="btn-dismiss" type="button" class="btn btn-default btn-def btn-lg">Dismiss</button>
                       </div>
                       <div class="pop-event-friends-list">
                         <p class="font-gray"><span class="font-black font-bold">10</span> <span class="font-gray">Friends Chipped In</span></p>
@@ -281,34 +284,48 @@
 
                     <div class="pop_event_info">
                       <span class="font-bold">Vodafone</span>
-                      <h2 class="pop_event_title">Cycling Marathon 2014</h2>
-                      <h2 class="pop_event_title">Bangalore</h2>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                      <h3 class="pop_event_title">Cycling Marathon 2014, Bangalore</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
                       <h4>Passion Ride <span class="font-bold">40 km | </span>Green Ride <span class="font-bold">20 km | </span>Fun Ride <span class="font-bold">10 km</span></h4>
+                      
+                      <div class="event_more_info">
+                        <div class="video_holder">
+
+                          <!-- for a video from youtube or vimeo.... -->
+                          <!-- <iframe src=""></iframe> -->
+
+                          <!-- for a video from local source -->
+                          <video controls>
+
+                            <source src="<include your video location here>" type="video/mp4">
+                            
+                            <object data="<include your video location here>" width="320" height="240">
+                              <embed width="320" height="240" src="<include your video location here>">
+                            </object>
+                            
+                          </video>
+                        </div>
+                        <div>
+                          <h3 style="display:inline-block;">Contact</h3>
+                          <p>
+                            <span>Email: <a href="mailto:hi@abc.com">hi@abc.com</a></span><br>
+                            <span>Mobile: +91 1924849484</span><br>
+                            <span><a href="#" target="_blank">www.ozsum.com</a></span>
+                          </p>
+                        </div>
+                      </div>
+
                     </div>
 
 
 
               <!-- this part is not completed yet -->
-              <div class="slider1">
-                <div class="slide">
-                  <div class="video_holder">
-                    <!-- <iframe src="//www.youtube.com/embed/UWb5Qc-fBvk" frameborder="0" allowfullscreen></iframe> -->
-                    <video controls autoplay>
-                      <source src="img/movie.mov" type="video/mov">
-                      
-                      <object data="movie.mov" width="320" height="240">
-                        <embed width="320" height="240" src="movie.mov">
-                      </object>
-                    </video>
-                  </div>
-                </div>
-                <div class="slide">
-                      
-                </div>
+                  
                 
-                </div>
+                
+
+
               </div>
 
 
@@ -602,10 +619,10 @@
                     </tbody>
                   </table>
                 </div>
-                <div class="pop-event-patch patch-chipped">
+                <div class="patch-pop-event">
                   <span class="btn-shadow"><button href="#pop_birthday_voucher" type="button" class="voucher_trigger btn btn-primary btn-lg">Chip-in</button></span>
                   
-                  <button id="btn-dismiss" type="button" class="btn btn-default btn-lg">Dismiss</button>
+                  <button id="btn-dismiss" type="button" class="btn btn-default btn-def btn-lg">Dismiss</button>
                 </div>
                 <div class="pop-event-friends-list">
                   <p class="font-gray"><span class="font-black font-bold">10</span> <span class="font-gray">Friends Chipped In</span></p>
@@ -629,8 +646,8 @@
         
 
         <div style='display:none'>
-          <div id="pop_birthday_voucher">
-            <div class="tile-event-outer pop-event-outer pop-no-margin">
+          <div id="pop_birthday_voucher" class="pop_birthday_flow">
+            <div class="tile-event-outer pop-event-outer">
               <div class="tile-event tile-event-pop" style="height:150px;">
                 <table>
                   <tbody>
@@ -659,7 +676,7 @@
                       </div>
                     </td>
                     <td>
-                      <p class="p_recommended font-black pop-no-margin"><span class="font-bold font-black">John Turturro</span><span class="no-wrap"> has recommended </span><br><span class="font-bold font-black">GIFT BIG</span></p>
+                      <p class="p_recommended font-black pop-no-margin"><span class="font-bold font-black no-wrap">John Turturro</span><span> has recommended </span><br><span class="font-bold font-black">GIFT BIG</span></p>
                     </td>
                     <td>
                       <div class="has_recommended_img2 img-viewport-medium">
@@ -673,10 +690,11 @@
             </div>
             <div class="pop_voucher_vault">
               <h3 class="pop_event_title font-blue">Choose a gift from your voucher vault</h3>
-              <div class="slider1">
+              <div class="voucher-slider">
                 
                 <div class="slide">
-                  <a href="#" class="voucher_active">
+                  <input id="voucher1" type="checkbox" checked>
+                  <label for="voucher1">
                     <div class="voucher">
                       <table>
                         <tr>
@@ -691,64 +709,12 @@
                         </tr>
                       </table>
                     </div>
-                  </a>
+                  </label>
                 </div>
+
                 <div class="slide">
-                  <a href="#" class="voucher_active">
-                    <div class="voucher">
-                      <table>
-                        <tr>
-                          <td>
-                            <div class="img-viewport-voucher">
-                              <img src="img/brand.png">  
-                            </div>
-                          </td>
-                          <td>
-                            <span class="font-small font-black">KALYAN <br>Rs.2,000</span>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                  </a>
-                </div>
-                <div class="slide">
-                  <a href="#" class="voucher_active">
-                    <div class="voucher">
-                      <table>
-                        <tr>
-                          <td>
-                            <div class="img-viewport-voucher">
-                              <img src="img/brand.png">  
-                            </div>
-                          </td>
-                          <td>
-                            <span class="font-small font-black">VERSACE <br>Rs.2,000</span>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                  </a>
-                </div>
-                <div class="slide">
-                  <a href="#" class="voucher_active">
-                    <div class="voucher">
-                      <table>
-                        <tr>
-                          <td>
-                            <div class="img-viewport-voucher">
-                              <img src="img/brand.png">  
-                            </div>
-                          </td>
-                          <td>
-                            <span class="font-small font-black">SONY <br>Rs.2,000</span>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                  </a>
-                </div>
-                <div class="slide">
-                  <a href="#" class="voucher_active">
+                  <input id="voucher2" type="checkbox">
+                  <label for="voucher2">
                     <div class="voucher">
                       <table>
                         <tr>
@@ -763,7 +729,47 @@
                         </tr>
                       </table>
                     </div>
-                  </a>
+                  </label>
+                </div>
+
+                <div class="slide">
+                  <input id="voucher3" type="checkbox" checked>
+                  <label for="voucher3">
+                    <div class="voucher">
+                      <table>
+                        <tr>
+                          <td>
+                            <div class="img-viewport-voucher">
+                              <img src="img/brand.png">  
+                            </div>
+                          </td>
+                          <td>
+                            <span class="font-small font-black">NIKE <br>Rs.2,000</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </label>
+                </div>
+
+                <div class="slide">
+                  <input id="voucher4" type="checkbox" >
+                  <label for="voucher4">
+                    <div class="voucher">
+                      <table>
+                        <tr>
+                          <td>
+                            <div class="img-viewport-voucher">
+                              <img src="img/brand.png">  
+                            </div>
+                          </td>
+                          <td>
+                            <span class="font-small font-black">NIKE <br>Rs.2,000</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </label>
                 </div>
                 
               </div>
@@ -778,8 +784,8 @@
         
 
         <div style='display:none'>
-          <div id="pop_birthday_recommendation">
-            <div class="tile-event-outer pop-event-outer pop-no-margin">
+          <div id="pop_birthday_recommendation" class="pop_birthday_flow">
+            <div class="tile-event-outer pop-event-outer">
               <div class="tile-event tile-event-pop" style="height:150px;">
                 <table>
                   <tbody>
@@ -808,7 +814,7 @@
                       </div>
                     </td>
                     <td>
-                      <p class="p_recommended font-black pop-no-margin"><span class="font-bold font-black">John Turturro</span><span class="no-wrap"> has recommended </span><br><span class="font-bold font-black">GIFT BIG</span></p>
+                      <p class="p_recommended font-black pop-no-margin"><span class="font-bold font-black no-wrap">John Turturro</span><span> has recommended </span><br><span class="font-bold font-black">GIFT BIG</span></p>
                     </td>
                     <td>
                       <div class="has_recommended_img2 img-viewport-medium">
@@ -822,10 +828,11 @@
             </div>
             <div class="pop_voucher_vault">
               <h3 class="pop_event_title font-blue">Recommend another gift for <span class="font-bold">Arnie Hammer</span></h3>
-              <div class="slider1">
-                
+              
+              <div class="brand-slider">
                 <div class="slide">
-                  <a href="#" class="brand_active">
+                  <input id="brand1" type="checkbox" checked>
+                  <label for="brand1">
                     <div class="brand">
                       <table>
                         <tr>
@@ -842,10 +849,11 @@
                         </tr>
                       </table>
                     </div>
-                  </a>
+                  </label>
                 </div>
                 <div class="slide">
-                  <a href="#" class="brand_active">
+                  <input id="brand2" type="checkbox">
+                  <label for="brand2">
                     <div class="brand">
                       <table>
                         <tr>
@@ -862,10 +870,11 @@
                         </tr>
                       </table>
                     </div>
-                  </a>
+                  </label>
                 </div>
                 <div class="slide">
-                  <a href="#" class="brand_active">
+                  <input id="brand3" type="checkbox">
+                  <label for="brand3">
                     <div class="brand">
                       <table>
                         <tr>
@@ -882,10 +891,11 @@
                         </tr>
                       </table>
                     </div>
-                  </a>
+                  </label>
                 </div>
                 <div class="slide">
-                  <a href="#" class="brand_active">
+                  <input id="brand4" type="checkbox" checked>
+                  <label for="brand4">
                     <div class="brand">
                       <table>
                         <tr>
@@ -902,10 +912,11 @@
                         </tr>
                       </table>
                     </div>
-                  </a>
+                  </label>
                 </div>
                 <div class="slide">
-                  <a href="#" class="brand_active">
+                  <input id="brand5" type="checkbox" checked>
+                  <label for="brand5">
                     <div class="brand">
                       <table>
                         <tr>
@@ -922,13 +933,55 @@
                         </tr>
                       </table>
                     </div>
-                  </a>
+                  </label>
                 </div>
-                
+                <div class="slide">
+                  <input id="brand6" type="checkbox">
+                  <label for="brand6">
+                    <div class="brand">
+                      <table>
+                        <tr>
+                          <td>
+                            <div class="img-viewport-voucher">
+                              <img src="img/brand.png">  
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center;">
+                            <span class="font-small font-black">NIKE</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </label>
+                </div>
+                <div class="slide">
+                  <input id="brand7" type="checkbox">
+                  <label for="brand7">
+                    <div class="brand">
+                      <table>
+                        <tr>
+                          <td>
+                            <div class="img-viewport-voucher">
+                              <img src="img/brand.png">  
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: center;">
+                            <span class="font-small font-black">NIKE</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </label>
+                </div>
               </div>
+
               <hr id="hr-voucher">
               <div class="btn-grp">
-                <button type="button" class="btn btn-lg btn-default btn-def">Dismiss</button>
+                <button id="btn-recommend-dismiss" type="button" class="btn btn-lg btn-default btn-def">Dismiss</button>
                 <span class="btn-shadow" style="width:auto;"><button type="button" href="#pop_birthday_contribution" class="contribution_trigger btn btn-primary btn-lg">Recommend and advance</button></span>
               </div>
             </div>
@@ -937,8 +990,8 @@
 
 
         <div style='display:none'>
-          <div id="pop_birthday_contribution">
-            <div class="tile-event-outer pop-event-outer pop-no-margin">
+          <div id="pop_birthday_contribution" class="pop_birthday_flow">
+            <div class="tile-event-outer pop-event-outer">
               <div class="tile-event tile-event-pop" style="height:150px;">
                 <table>
                   <tbody>
@@ -967,7 +1020,7 @@
                       </div>
                     </td>
                     <td>
-                      <p class="p_recommended font-black pop-no-margin"><span class="font-bold font-black">You</span><span class="no-wrap"> have recommended </span><br><span class="font-bold font-black">APPLE</span></p>
+                      <p class="p_recommended font-black pop-no-margin"><span class="font-bold font-black">You</span><span> have recommended </span><br><span class="font-bold font-black">APPLE</span></p>
                     </td>
                     <td>
                       <div class="has_recommended_img2 img-viewport-medium">
@@ -979,7 +1032,7 @@
               </div>
               
             </div>
-            <div class="pop_voucher_vault" style="width:63%;">
+            <div class="pop_voucher_vault">
               <form id="#form-contribute">
                 <h3 class="pop_event_title font-blue">Contribute and shout out!</h3>
               <div class="div-amount">
@@ -997,8 +1050,8 @@
                   Keep my contribution anonymous
                 </label>
               </div>
-              <hr id="hr-voucher">
-              <div class="btn-grp">
+              <hr>
+              <div class="btn-grp" style="top:0px;">
                 <button type="button" class="btn btn-lg btn-default btn-def">Not now</button>
                 <span class="btn-shadow" style="width:auto;"><button type="button" href="#" class="btn btn-primary btn-lg">Pay</button></span>
               </div>
