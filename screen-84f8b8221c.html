@@ -31,7 +31,7 @@
         $(".voucher_trigger").colorbox({inline:true, width:"80%"});
         $(".brand_recommendation_trigger").colorbox({inline:true, width:"80%"});
         $(".contribution_trigger").colorbox({inline:true, width:"80%"});
-
+        $(".event-iframe1").colorbox({iframe:true, width:"80%", height:"80%"});
 
           
       });
@@ -61,9 +61,42 @@
         });
       });
     </script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // $('.share-this').popover({trigger: 'hover','placement': 'right'});
+        // $('html').click(function(e) {
+        //   $('.share-this').popover('hide');
+        // });
+
+        $('.share-this').popover({ 
+          html : true, 
+          trigger:'click',
+          content: function() {
+            return $('#share-this-wrapper').html();
+          }
+        });
+
+        $('.share-this').popover().click(function () {
+          setTimeout(function () {
+              $('.share-this').popover('hide');
+          }, 1500);
+        });
+        // $('.chip-alert').popover('show');
+        $('.chip-alert').popover({trigger: 'click','placement': 'bottom'});
+          // window.setTimeout(function(){
+          //   $('.chip-alert').popover('hide');
+          // }, 600); //600 are the ms until the timeout is called
+        $('.chip-alert').popover().click(function () {
+          setTimeout(function () {
+              $('.chip-alert').popover('hide');
+          }, 800);
+        });
+      });
+    </script>
 </head>
   
   <body>
+    
     <nav class="navbar navbar-default" role="navigation">
       <div class="navbar-header" align="center" style="float:none;">
         <a class="navbar-brand" style="float:none;" href="#"><img src="img/logo.jpg"></a>
@@ -114,7 +147,12 @@
               </ul>
             </li>
             <li>
-              <a id="setting" href="#"></a>
+              <a id="setting" href="#" class="dropdown-toggle" data-toggle="dropdown"></a>
+              <ul class="dropdown-menu dropdown-menu2">
+                <li>
+                  <a href="#">Logout</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -142,6 +180,15 @@
         </div>
       </div>
       <div class="dashboard-content container no-margin-padding">
+        <!-- new message -->
+        <div>
+          <div id="well-dashboard" class="well well-lg"><p>Spark a movement, cause a change or just revel in a celebration
+            <br>life is O<sub>z</sub>SUM when your crowd gets together!</p>
+            <h3 class="font-bold">
+              Watch out for more O<sub>z</sub>SUM features soon!
+            </h3></div>
+        </div>
+
         <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-start">
           <a class="inline" href="#pop_event">
             <div class="tile-event-outer">
@@ -260,7 +307,7 @@
                         </table>
                       </div>
                       <div class="patch-pop-event">
-                        <span class="btn-shadow"><button type="button" class="btn btn-primary btn-lg">Chip-in</button></span>
+                        <span class="btn-shadow"><a type="button" class="btn btn-primary btn-lg chip-alert" data-container="body" data-toggle="popover" data-placement="bottom" data-content="You will be redirected to the partner's website for completing the transaction. For all payment queries, please contact the partner's support numbers and email.">Chip-in</a></span>
                         
                         <button id="btn-dismiss" type="button" class="btn btn-default btn-def btn-lg">Dismiss</button>
                       </div>
@@ -315,20 +362,12 @@
                           </p>
                         </div>
                       </div>
+                      <div>
+                        <a href="1.html" class="btn btn-primary event-iframe1">Next</a>
+                      </div>
 
                     </div>
-
-
-
-              <!-- this part is not completed yet -->
-                  
-                
-                
-
-
               </div>
-
-
           </div>
         </div>
         <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-invites">
@@ -1124,420 +1163,7 @@
             </div>
           </div>
         </div>
-        <!-- <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-start">
-          <div class="tile-event-outer">
-            <div class="tile-event">
-              <table>
-                <tbody>
-                  <tr>
-                    <td class="event-img-holder">
-                      <img src="img/bale.png">
-                    </td>
-                    <td>
-                      <div class="box-event-type event-birthday">
-                        BIRTHDAY
-                      </div>
-                      <span class="event-name">Christian Bale</span>
-                      <span class="event-date">February 21, 2014</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="table-days-left">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-orange">
-                                03
-                              </div>
-                            </td>
-                            <td class="days-left">
-                              Days Left
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                    <td>
-                      <table class="table-friends-chipped">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-black">
-                                03
-                              </div>
-                            </td>
-                            <td class="friends-chipped">
-                              Friends Chipped In
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="event-patch patch-start-chip">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-invites">
-          <div class="tile-event-outer">
-            <div class="tile-event">
-              <table>
-                <tbody>
-                  <tr>
-                    <td class="event-img-holder">
-                      <img src="img/bale.png">
-                    </td>
-                    <td>
-                      <div class="box-event-type event-birthday">
-                        BIRTHDAY
-                      </div>
-                      <span class="event-name">Christian Bale</span>
-                      <span class="event-date">February 21, 2014</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="table-days-left">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-orange">
-                                03
-                              </div>
-                            </td>
-                            <td class="days-left">
-                              Days Left
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                    <td>
-                      <table class="table-friends-chipped">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-black">
-                                03
-                              </div>
-                            </td>
-                            <td class="friends-chipped">
-                              Friends Chipped In
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="event-patch patch-chip-invites">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-invites">
-          <div class="tile-event-outer">
-            <div class="tile-event">
-              <table>
-                <tbody>
-                  <tr>
-                    <td class="event-img-holder">
-                      <img src="img/bale.png">
-                    </td>
-                    <td>
-                      <div class="box-event-type event-birthday">
-                        BIRTHDAY
-                      </div>
-                      <span class="event-name">Christian Bale</span>
-                      <span class="event-date">February 21, 2014</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="table-days-left">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-orange">
-                                03
-                              </div>
-                            </td>
-                            <td class="days-left">
-                              Days Left
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                    <td>
-                      <table class="table-friends-chipped">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-black">
-                                03
-                              </div>
-                            </td>
-                            <td class="friends-chipped">
-                              Friends Chipped In
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="event-patch patch-chip-invites">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-invites">
-          <div class="tile-event-outer">
-            <div class="tile-event">
-              <table>
-                <tbody>
-                  <tr>
-                    <td class="event-img-holder">
-                      <img src="img/bale.png">
-                    </td>
-                    <td>
-                      <div class="box-event-type event-birthday">
-                        BIRTHDAY
-                      </div>
-                      <span class="event-name">Christian Bale</span>
-                      <span class="event-date">February 21, 2014</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="table-days-left">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-orange">
-                                03
-                              </div>
-                            </td>
-                            <td class="days-left">
-                              Days Left
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                    <td>
-                      <table class="table-friends-chipped">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-black">
-                                03
-                              </div>
-                            </td>
-                            <td class="friends-chipped">
-                              Friends Chipped In
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="event-patch patch-chip-invites">
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-invites">
-          <div class="tile-event-outer">
-            <div class="tile-event">
-              <table>
-                <tbody>
-                  <tr>
-                    <td class="event-img-holder">
-                      <img src="img/bale.png">
-                    </td>
-                    <td>
-                      <div class="box-event-type event-birthday">
-                        BIRTHDAY
-                      </div>
-                      <span class="event-name">Christian Bale</span>
-                      <span class="event-date">February 21, 2014</span>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <table class="table-days-left">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-orange">
-                                03
-                              </div>
-                            </td>
-                            <td class="days-left">
-                              Days Left
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                    <td>
-                      <table class="table-friends-chipped">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-black">
-                                03
-                              </div>
-                            </td>
-                            <td class="friends-chipped">
-                              Friends Chipped In
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="event-patch patch-chip-invites">
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-start">
-        <div class="tile-event-outer">
-          <div class="box-event-type">
-            BIRTHDAY
-          </div>
-          <div class="tile-event">
-            <img class="event-img" src="img/bale.png">
-            <br>
-            <span class="event-name">James McAvoy</span>
-            <br>
-            <span class="event-date">April 18, 2014</span>
-          </div>
-          <hr class="hr-dotted">
-          <div class="event-patch patch-red">
-            <table class="table-days-left">
-              <tbody>
-                <tr>
-                  <td>
-                    <div class="box-days">
-                      58
-                    </div>
-                  </td>
-                  <td class="days-left">
-                    DAYS LEFT
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-start">
-          <div class="tile-event-outer">
-            <div class="box-event-type">
-              EVENT
-            </div>
-            <div class="tile-event">
-              <img class="event-img" src="img/bale.png">
-              <br>
-              <span class="event-name">Indian Blue Live</span>
-              <br>
-              <span class="event-date">April 19, 2014</span>
-            </div>
-            <hr class="hr-dotted">
-            <div class="event-patch patch-red">
-              <table class="table-days-left">
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="box-days">
-                        59
-                      </div>
-                    </td>
-                    <td class="days-left">
-                      DAYS LEFT
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-start">
-          <div class="tile-event-outer">
-            <div class="box-event-type">
-              BIRTHDAY
-            </div>
-            <div class="tile-event">
-              <img class="event-img" src="img/bale.png">
-              <br>
-              <span class="event-name">Emma Watson</span>
-              <br>
-              <span class="event-date">April 30, 2014</span>
-            </div>
-            <hr class="hr-dotted">
-            <div class="event-patch patch-red">
-              <table class="table-days-left">
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="box-days">
-                        70
-                      </div>
-                    </td>
-                    <td class="days-left">
-                      DAYS LEFT
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-start">
-          <div class="tile-event-outer">
-            <div class="box-event-type">
-              EVENT
-            </div>
-            <div class="tile-event">
-              <img class="event-img" src="img/bale.png">
-              <br>
-              <span class="event-name">Shubha Mudgal</span>
-              <br>
-              <span class="event-date">May 03, 2014</span>
-            </div>
-            <hr class="hr-dotted">
-            <div class="event-patch patch-red">
-              <table class="table-days-left">
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="box-days">
-                        73
-                      </div>
-                    </td>
-                    <td class="days-left">
-                      DAYS LEFT
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div> -->
+
       </div>
       <div id="pagination-holder" align="center">
         <ul class="pagination">
@@ -1566,20 +1192,23 @@
       </div>
     </div>
     <div id="footer" class="footerbar" align="center">
-      © Zenmesh Pvt. Ltd. 2014 &nbsp;&nbsp;&nbsp;
+      © ZenMesh Pvt. Ltd. 2014 &nbsp;&nbsp;&nbsp;
       <a href="#">About</a>
       &nbsp;&nbsp;&nbsp;
-      <a href="#">Privacy</a>
+      <a href="#">Privacy Policy</a>
       &nbsp;&nbsp;&nbsp;
-      <a href="#">Terms</a>
+      <a href="#">Terms of Use</a>
       &nbsp;&nbsp;&nbsp;
       <a href="#">Report an Issue</a>
       &nbsp;&nbsp;&nbsp;
-      <a href="#">Contact Us</a>
+      <a href="mailto:info@zenmesh.biz">Contact Us</a>
       &nbsp;&nbsp;&nbsp;
-      <a href="#">Help</a>
-      &nbsp;&nbsp;&nbsp;
-      <a href="#">Share this</a>
+      <a class="share-this" style="cursor:pointer;">Share this</a>
+    </div>
+    <div id="share-this-wrapper" style="display: none">
+      <a href="#"><img width="20" src="img/fb.png"></a>
+      <a href="#"><img width="20" src="img/twitter.png"></a>
+      <a href="#"><img width="20" src="img/google-plus.png"></a>
     </div>
     <br>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js">

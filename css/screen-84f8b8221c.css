@@ -20,7 +20,7 @@ border-radius: 3px;
 .navbar-default {
 background-color: #FFFFFF;}
 #notifier{background-color:rgba(0,0,0,0) !important; background-size: 23px 25px;left: 10px;background-image:url(../img/notification.png);background-repeat:no-repeat;}
-#setting{background-size: 25px;background-image:url(../img/setting.png);background-repeat:no-repeat;}
+#setting{background-size: 25px;background-image:url(../img/setting.png);background-repeat:no-repeat;background-color:rgba(0,0,0,0) !important;}
 .navbar-nav>li {padding:10px;}
 .dropdown-menu{width:300px;}
 .dropdown-menu li div{color:#000;}
@@ -154,6 +154,21 @@ body{margin-bottom:0px;}
 .tile-event{height: 205px;}
 .font-small{font-size: 12px;}
 
+/* for minor changes*/
+.popover-content{color: #000;}
+.dropdown-menu2{width:200px;}
+.navbar .dropdown-menu2::after {
+  position: absolute;
+  top: -6px;
+  right: 20px;
+  display: inline-block;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+  border-left: 6px solid transparent;
+  content: '';
+}
+#well-dashboard{background-color: rgba(39, 39, 39, 0.64);margin-left: auto;margin-right: auto;margin-top: 20px;border-bottom: 1px solid #e3e3e3;border-top:none;border-right:none;border-left:none;width: 90%;text-align: center;}
+.well-lg {border-radius: 2px;}
 
 /* Small devices (tablets, 767px and up) */
 @media (min-width: 767px) {
@@ -175,6 +190,7 @@ body{margin-bottom:0px;}
   .tile-event, .event-patch{width: 230px;}
   .event-img-holder{width: 80px;height: 80px;}
   .event-img{padding:10px 10px 10px 0px;width:80px;min-height: 80px;}
+  #well-dashboard{width: 95%;}
 }/* Large devices (net-books, 992px and up) */
 @media (min-width: 992px) {
   .navbar-brand{left: 30px; position: relative;}
@@ -189,6 +205,7 @@ body{margin-bottom:0px;}
   .tile-event, .event-patch{width: 230px;}
   .event-img-holder{width: 80px;height: 80px;}
   .event-img{padding:10px 10px 10px 0px;width:80px;min-height: 80px;}
+  #well-dashboard{width: 95%;}
 }
 /* Very Large devices (desktops, 1200px and up) */
 @media (min-width: 1200px) {
@@ -207,4 +224,5 @@ body{margin-bottom:0px;}
   .tile-event, .event-patch{width: 309px;}
   .event-img-holder{width: 127px;height: 127px;}
   .event-img{padding:10px 10px 10px 10px;width:127px;min-height: 127px;}
+  #well-dashboard{width: 60%;}
 }
