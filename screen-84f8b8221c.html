@@ -64,7 +64,7 @@
     </script>
     <script type="text/javascript">
       $(document).ready(function() {
-        $('input').iCheck({checkboxClass: 'icheckbox_polaris',radioClass: 'iradio_polaris',increaseArea: '-10%' // optional
+        $('input.iChk').iCheck({checkboxClass: 'icheckbox_polaris',radioClass: 'iradio_polaris',increaseArea: '-10%' // optional
         });
       });
     </script>
@@ -100,6 +100,31 @@
         });
       });
     </script>
+   
+  <script type="text/javascript">
+  // $(document).ready(function() {
+  //   jQuery(document).ready(function($) {
+  //     $('input#chkContr').change(function(){
+  //       if ($(this).is(':checked'))
+  //       $(this).next('div.txtContr').show();
+  //   else
+  //       $(this).next('div.txtContr').hide();
+  //     }).change();
+  //   });
+  // });
+$(document).ready(function() {
+  $('#chkContr').click(function () {
+    $(".txtContr").toggle(this.checked);
+});
+  });
+
+//  $(document).ready(function() {
+// if($("input#chkContr").is(':checked'))
+//     $("div.txtContr").show();  // checked
+// else
+//     $("div.txtContr").hide();  // unchecked
+// });
+  </script> 
     
 </head>
   
@@ -372,6 +397,15 @@
                         </div>
                       </div>
                       <div>
+                        <div>
+                          <input type="checkbox" id="chkContr" name="">
+                          <label for="chkContr" style="color:#000;">I have already contributed</label>
+                          <span class="txtContr" style="display:none;color:#000;font-weight:bold;">
+                            using <input type="text" id="txtbxContr" >
+                          </span>
+                        </div>
+                        
+                        
                         <a href="1.html" class="btn btn-primary event-iframe1">Next</a>
                       </div>
 
