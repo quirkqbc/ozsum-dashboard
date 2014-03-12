@@ -64,7 +64,7 @@
         $('.share-this').popover().click(function () {
           setTimeout(function () {
               $('.share-this').popover('hide');
-          }, 1500);
+          }, 3500);
         });
         $('.chip-alert').popover({trigger: 'click','placement': 'bottom'});
         $('.chip-alert').popover().click(function () {
@@ -84,6 +84,28 @@
   </script> 
   </head>
   <body>
+
+    <!-- DO NOT include this script. there's a bug with the facebok api. we are working on this -->
+     <div id="fb-root"></div>
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '204592589606556',
+          status     : true,
+          xfbml      : true
+        });
+      };
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "https://connect.facebook.net/en_US/all.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
+
+
+
     <nav class="navbar navbar-default" role="navigation">
       <div class="navbar-header" align="center" style="float:none;">
         <a class="navbar-brand" style="float:none;" href="#"><img src="img/logo.jpg"></a>
@@ -1202,13 +1224,22 @@
       <a class="share-this" style="cursor:pointer;">Share this</a>
     </div>
     <div id="share-this-wrapper" style="display: none">
-      <a href="#"><img width="20" src="img/fb.png"></a>
-      <a href="#"><img width="20" src="img/twitter.png"></a>
-      <a href="#"><img width="20" src="img/google-plus.png"></a>
+      <a href="http://facebook.com" target="_blank"><img width="20" src="img/fb.png"></a>
+
+
+      <!-- DO NOT include this script. there's a bug with the facebok api. we are working on this -->
+      <!-- <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-width="30" data-type="icon" style="left:-10px;"></div> -->      
+
+
+      <a href="#" target="_blank"><img width="20" src="img/twitter.png"></a>
+      <a href="#" target="_blank"><img width="20" src="img/google-plus.png"></a>
     </div>
     <br>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js">
     </script>
     <script src="js/screen-84f8b8221c.js"></script>
+    <style type="text/css">
+      /*.fb-share-button iframe{height: 30px !important;}*/
+    </style>
   </body>
 </html>
