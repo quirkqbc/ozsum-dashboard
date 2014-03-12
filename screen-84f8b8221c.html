@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  
   <head>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>
     </title>
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-                                                                                                                                                                                                                                                                                                        
     </script>
     <script>
-        $(window).load(function(){
-            $('.loading-gif').fadeOut(1500);
-        });
+      $(window).load(function(){
+          $('.loading-gif').fadeOut(1500);
+      });
     </script>
     <link rel="stylesheet" type="text/css" href="css/colorbox.css">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
     rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,300'
-    rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,300' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
     <script>
       $(function() {
         $('#user-dashboard').mixitup();
       });
     </script>
-
     <link href="css/screen-84f8b8221c.css" rel="stylesheet">
     <script>
       $(document).ready(function(){
@@ -39,8 +33,6 @@
         $(".brand_recommendation_trigger").colorbox({inline:true, width:"80%"});
         $(".contribution_trigger").colorbox({inline:true, width:"80%"});
         $(".event-iframe1").colorbox({iframe:true, width:"80%", height:"80%"});
-
-          
       });
     </script>
     <script type="text/javascript">
@@ -49,17 +41,9 @@
       });
     </script>
     <script type="text/javascript">
-      $('#btn-dismiss').click(function () {
-        // $.colorbox.close(); // Nothing happens, no JavaScript error
-        jQuery('#cboxClose').click();
-      });
-    </script>
-    <script type="text/javascript">
       $(document).ready(function() {
         $('.voucher-slider').bxSlider({slideWidth: 105,minSlides: 2,maxSlides: 3,moveSlides: 1,slideMargin: 220});
         $('.brand-slider').bxSlider({slideWidth: 205,minSlides: 1,maxSlides: 3,moveSlides: 1,slideMargin: 10});
-        
-        // $('.slider_videoframe').bxSlider({slideWidth: 105,minSlides: 1,maxSlides: 1,moveSlides: 1,slideMargin: 30});
       });
     </script>
     <script type="text/javascript">
@@ -70,11 +54,6 @@
     </script>
     <script type="text/javascript">
       $(document).ready(function() {
-        // $('.share-this').popover({trigger: 'hover','placement': 'right'});
-        // $('html').click(function(e) {
-        //   $('.share-this').popover('hide');
-        // });
-
         $('.share-this').popover({ 
           html : true, 
           trigger:'click',
@@ -82,17 +61,12 @@
             return $('#share-this-wrapper').html();
           }
         });
-
         $('.share-this').popover().click(function () {
           setTimeout(function () {
               $('.share-this').popover('hide');
           }, 1500);
         });
-        // $('.chip-alert').popover('show');
         $('.chip-alert').popover({trigger: 'click','placement': 'bottom'});
-          // window.setTimeout(function(){
-          //   $('.chip-alert').popover('hide');
-          // }, 600); //600 are the ms until the timeout is called
         $('.chip-alert').popover().click(function () {
           setTimeout(function () {
               $('.chip-alert').popover('hide');
@@ -102,34 +76,14 @@
     </script>
    
   <script type="text/javascript">
-  // $(document).ready(function() {
-  //   jQuery(document).ready(function($) {
-  //     $('input#chkContr').change(function(){
-  //       if ($(this).is(':checked'))
-  //       $(this).next('div.txtContr').show();
-  //   else
-  //       $(this).next('div.txtContr').hide();
-  //     }).change();
-  //   });
-  // });
-$(document).ready(function() {
-  $('#chkContr').click(function () {
-    $(".txtContr").toggle(this.checked);
-});
-  });
-
-//  $(document).ready(function() {
-// if($("input#chkContr").is(':checked'))
-//     $("div.txtContr").show();  // checked
-// else
-//     $("div.txtContr").hide();  // unchecked
-// });
+    $(document).ready(function() {
+      $('#chkContr').click(function () {
+        $(".txtContr").toggle(this.checked);
+      });
+    });
   </script> 
-    
-</head>
-  
+  </head>
   <body>
-    
     <nav class="navbar navbar-default" role="navigation">
       <div class="navbar-header" align="center" style="float:none;">
         <a class="navbar-brand" style="float:none;" href="#"><img src="img/logo.jpg"></a>
@@ -213,7 +167,6 @@ $(document).ready(function() {
         </div>
       </div>
       <div class="dashboard-content container no-margin-padding">
-        <!-- new message -->
         <div>
           <div id="well-dashboard" class="well well-lg"><p>Spark a movement, cause a change or just revel in a celebration
             <br>life is O<sub>z</sub>SUM when your crowd gets together!</p>
@@ -222,9 +175,8 @@ $(document).ready(function() {
             </h3></div>
         </div>
         <div class="loading-gif"></div>
-
         <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-start">
-          <a class="inline" href="#pop_event">
+          <a class="inline" href="#pop_event" style="outline-style: none;">
             <div class="tile-event-outer">
               <div class="tile-event">
                 <table>
@@ -343,7 +295,7 @@ $(document).ready(function() {
                       <div class="patch-pop-event">
                         <span class="btn-shadow"><a type="button" class="btn btn-primary btn-lg chip-alert" data-container="body" data-toggle="popover" data-placement="bottom" data-content="You will be redirected to the partner's website for completing the transaction. For all payment queries, please contact the partner's support numbers and email.">Chip-in</a></span>
                         
-                        <button id="btn-dismiss" type="button" class="btn btn-default btn-def btn-lg">Dismiss</button>
+                        <button id="btn-dismiss" type="button" class="btn btn-default btn-def btn-lg" onclick='parent.$.colorbox.close(); return false;'>Dismiss</button>
                       </div>
                       <div class="pop-event-friends-list">
                         <p class="font-gray"><span class="font-black font-bold">10</span> <span class="font-gray">Friends Chipped In</span></p>
@@ -370,7 +322,7 @@ $(document).ready(function() {
 
                       <h4>Passion Ride <span class="font-bold">40 km | </span>Green Ride <span class="font-bold">20 km | </span>Fun Ride <span class="font-bold">10 km</span></h4>
                       
-                      <div class="event_more_info">
+                      <div class="event_more_info" style="display:none;">
                         <div class="video_holder">
 
                           <!-- for a video from youtube or vimeo.... -->
@@ -397,6 +349,7 @@ $(document).ready(function() {
                         </div>
                       </div>
                       <div>
+                        <iframe src="1.html" width="100%" style="border:none;" scrolling="yes"></iframe>
                         <div>
                           <input type="checkbox" id="chkContr" name="">
                           <label for="chkContr" style="color:#000;">I have already contributed</label>
@@ -704,7 +657,7 @@ $(document).ready(function() {
                 <div class="patch-pop-event">
                   <span class="btn-shadow"><button href="#pop_birthday_voucher" type="button" class="voucher_trigger btn btn-primary btn-lg">Chip-in</button></span>
                   
-                  <button id="btn-dismiss" type="button" class="btn btn-default btn-def btn-lg">Dismiss</button>
+                  <button id="btn-dismiss" type="button" class="btn btn-default btn-def btn-lg" onclick='parent.$.colorbox.close(); return false;'>Dismiss</button>
                 </div>
                 <div class="pop-event-friends-list">
                   <p class="font-gray"><span class="font-black font-bold">10</span> <span class="font-gray">Friends Chipped In</span></p>
@@ -1066,7 +1019,7 @@ $(document).ready(function() {
 
               <hr id="hr-voucher">
               <div class="btn-grp">
-                <button id="btn-recommend-dismiss" type="button" class="btn btn-lg btn-default btn-def">Dismiss</button>
+                <button id="btn-recommend-dismiss" type="button" class="btn btn-lg btn-default btn-def" onclick='parent.$.colorbox.close(); return false;'>Dismiss</button>
                 <span class="btn-shadow" style="width:auto;"><button type="button" href="#pop_birthday_contribution" class="contribution_trigger btn btn-primary btn-lg">Recommend and advance</button></span>
               </div>
             </div>
@@ -1256,8 +1209,6 @@ $(document).ready(function() {
     <br>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js">
     </script>
-  
     <script src="js/screen-84f8b8221c.js"></script>
-</body>
-
+  </body>
 </html>
