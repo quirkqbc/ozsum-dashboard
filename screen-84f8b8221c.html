@@ -77,7 +77,7 @@
    
   <script type="text/javascript">
     $(document).ready(function() {
-      $('#chkContr').click(function () {
+      $('.chkContr').click(function () {
         $(".txtContr").toggle(this.checked);
       });
     });
@@ -170,15 +170,15 @@
     <div id="user-dashboard" class="container container-dashboard no-padding">
       <div class="navbar-dashboard">
         <h2 class="h-dash">
-          My <span>O<sub>z</sub>SUM</span> events
+          My <span>O<sub>z</sub>SUM</span> Events
         </h2>
         <!-- this button navigation menu is hidden in mobile and replaced with
         hyperlinks below-->
         <div class="nav-btn-dashboard hidden-xs">
-          <a href="#" class="btn active btn-default btn-all-events filter" data-filter="chipped chip-invites chip-start">All</a>
-          <a href="#" class="btn btn-default btn-chipped filter" data-filter="chipped">Chipped-in</a>
-          <a href="#" class="btn btn-default btn-chip-invites filter" data-filter="chip-invites">Chip-invites</a>
-          <a href="#" class="btn btn-default btn-start-chip filter" data-filter="chip-start">Start a Chip-in</a>
+          <a href="#" class="btn active btn-default btn-all-events filter btn-lg" data-filter="chipped chip-invites chip-start">All</a>
+          <a href="#" class="btn btn-default btn-chipped filter btn-lg" data-filter="chipped">Chipped-in</a>
+          <a href="#" class="btn btn-default btn-chip-invites filter btn-lg" data-filter="chip-invites">Chip-invites</a>
+          <a href="#" class="btn btn-default btn-start-chip filter btn-lg" data-filter="chip-start">Start a Chip-in</a>
         </div>
         <!-- navigation menu for mobiles -->
         <div class="nav-link-dashboard visible-xs">
@@ -233,20 +233,9 @@
                         </table>
                       </td>
                       <td>
-                        <table class="table-friends-chipped">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <div class="number-count font-black">
-                                  03
-                                </div>
-                              </td>
-                              <td class="friends-chipped">
-                                Friends Chipped In
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <span class="btn-gift-shadow">
+                          <a href="#" class="btn btn-lg btn-primary">Gift</a>
+                        </span>
                       </td>
                     </tr>
                   </tbody>
@@ -338,6 +327,7 @@
 
 
                     <div class="pop_event_info">
+                      <div style="position:absolute;top:0px;right:0px;"><a href="#" onclick='parent.$.colorbox.close(); return false;'>X</a></div>
                       <span class="font-bold">Vodafone</span>
                       <h3 class="pop_event_title">Cycling Marathon 2014, Bangalore</h3>
                       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -373,7 +363,7 @@
                       <div>
                         <iframe src="1.html" width="100%" style="border:none;" scrolling="yes"></iframe>
                         <div>
-                          <input type="checkbox" id="chkContr" name="">
+                          <input type="checkbox" class="chkContr" name="">
                           <label for="chkContr" style="color:#000;">I have already contributed</label>
                           <span class="txtContr" style="display:none;color:#000;font-weight:bold;">
                             using <input type="text" id="txtbxContr" >
@@ -423,20 +413,9 @@
                       </table>
                     </td>
                     <td>
-                      <table class="table-friends-chipped">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-black">
-                                10
-                              </div>
-                            </td>
-                            <td class="friends-chipped">
-                              Friends Chipped In
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <span class="btn-gift-shadow">
+                        <a href="#" class="btn btn-lg btn-primary">Gift</a>
+                      </span>
                     </td>
                   </tr>
                 </tbody>
@@ -481,20 +460,9 @@
                       </table>
                     </td>
                     <td>
-                      <table class="table-friends-chipped">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-black">
-                                10
-                              </div>
-                            </td>
-                            <td class="friends-chipped">
-                              Friends Chipped In
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <span class="btn-gift-shadow">
+                        <a href="#" class="btn btn-lg btn-primary">Gift</a>
+                      </span>
                     </td>
                   </tr>
                 </tbody>
@@ -539,20 +507,9 @@
                       </table>
                     </td>
                     <td>
-                      <table class="table-friends-chipped">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-black">
-                                4
-                              </div>
-                            </td>
-                            <td class="friends-chipped">
-                              Friends Chipped In
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <span class="btn-gift-shadow">
+                        <a href="#" class="btn btn-lg btn-primary">Gift</a>
+                      </span>
                     </td>
                   </tr>
                 </tbody>
@@ -598,20 +555,9 @@
                         </table>
                       </td>
                       <td>
-                        <table class="table-friends-chipped">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <div class="number-count font-black">
-                                  6
-                                </div>
-                              </td>
-                              <td class="friends-chipped">
-                                Friends Chipped In
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
+                        <span class="btn-gift-shadow">
+                          <a href="#" class="btn btn-lg btn-primary">Gift</a>
+                        </span>
                       </td>
                     </tr>
                   </tbody>
@@ -1158,20 +1104,9 @@
                       </table>
                     </td>
                     <td>
-                      <table class="table-friends-chipped">
-                        <tbody>
-                          <tr>
-                            <td>
-                              <div class="number-count font-black">
-                                21
-                              </div>
-                            </td>
-                            <td class="friends-chipped">
-                              Friends Chipped In
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
+                      <span class="btn-gift-shadow">
+                        <a href="#" class="btn btn-lg btn-primary">Gift</a>
+                      </span>
                     </td>
                   </tr>
                 </tbody>
