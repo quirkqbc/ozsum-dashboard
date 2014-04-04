@@ -286,7 +286,7 @@ margin-left: 5px;
 }
 
 #pop-slct-vchr{
-  padding: 20px;
+  /*padding: 20px;*/
 }
 
 #pop-slct-vchr, #pop-slct-vchr p, #pop-slct-vchr div{
@@ -316,6 +316,9 @@ input{
 }
 .txtal-c{
   text-align: center;
+}
+.txtal-l{
+  text-align: left;
 }
 .img-close{
   position: absolute;
@@ -421,4 +424,7 @@ label{
 }
 .padL10{
   padding-left: 10px;
+}
+.marL10{
+  margin-left: 10px;
 }
