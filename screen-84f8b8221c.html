@@ -15,10 +15,12 @@
       });
     </script>
     <link rel="stylesheet" type="text/css" href="css/colorbox.css">
+    <link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css">
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"
     rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:600,300' rel='stylesheet' type='text/css'>
     <script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
+    <script type="text/javascript" src="js/easyResponsiveTabs.js"></script>
     <script>
       $(function() {
         $('#user-dashboard').mixitup();
@@ -33,12 +35,15 @@
         $(".brand_recommendation_trigger").colorbox({inline:true, width:"80%"});
         $(".contribution_trigger").colorbox({inline:true, width:"80%"});
         $(".event-iframe1").colorbox({iframe:true, width:"80%", height:"80%"});
+        // trigger to call "Leave a message" Pop-up window
+        $(".trig-leave-msg").colorbox({inline:true});
+        $(".trig-confirm-msg").colorbox({inline:true});
       });
     </script>
     <script type="text/javascript">
-      $(document).ready(function(){
-        $.colorbox.resize();
-      });
+      // $(document).ready(function(){
+      //   // $.colorbox.resize();
+      // });
     </script>
     <script type="text/javascript">
       $(document).ready(function() {
@@ -71,6 +76,13 @@
           setTimeout(function () {
               $('.chip-alert').popover('hide');
           }, 800);
+        });
+        $("#navTab").easyResponsiveTabs({           
+          type: 'vertical', //Types: default, vertical, accordion           
+          width: 'auto', //auto or any width like 600px
+          // fit: true,   // 100% fit in a container
+          // closed: 'accordion', // Start closed if in accordion view
+          // activate: function(event) {  }// Callback function if tab is switched                            
         });
       });
     </script>
@@ -520,7 +532,6 @@
           </div>
         </div>
         <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12 mix chip-invites">
-          <a class="inline_birthday" href="#pop_event_birthday">
             <div class="tile-event-outer">
               <div class="tile-event">
                 <table>
@@ -556,7 +567,7 @@
                       </td>
                       <td>
                         <span class="btn-gift-shadow">
-                          <a href="#" class="btn btn-lg btn-primary">Gift</a>
+                          <a href="#pop-slct-vchr" class="inline_birthday btn btn-lg btn-primary">Gift</a>
                         </span>
                       </td>
                     </tr>
@@ -566,7 +577,6 @@
               <div class="event-patch patch-chip-invites">
               </div>
             </div>
-          </a>
         </div>
         <div style='display:none'>
           <div id='pop_event_birthday' class="event_popup">
@@ -1169,6 +1179,357 @@
       <a href="#" target="_blank"><img width="20" src="img/twitter.png"></a>
       <a href="#" target="_blank"><img width="20" src="img/google-plus.png"></a>
     </div>
+
+
+    <!-- pop select voucher to gift -->
+
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('input:radio[name=vchr-frm-vlt]').each(function() {
+          checked(this);
+        });
+
+        $('input:radio[name=vchr-frm-vlt]').click(function() {
+          checked(this);
+        });
+
+        function checked(obj){
+          if($(obj).is(':checked')) {
+            $('#btn-gift1').removeAttr('disabled');
+          }else{
+            $('#btn-gift1').attr('disabled', 'true');
+          }
+        }
+      });
+    </script>
+
+      <div style="display:none;">
+        <div id="pop-slct-vchr">
+          <a href="#" onclick='parent.$.colorbox.close(); return false;'><img class="img-close" src="img/close.png"></a>
+          <h3 class="gry-hd" style="text-align:center;">Choose a voucher to gift your friend</h3>
+          <div class="search-grp" align="center">
+            <input type="text" placeholder="Search for a voucher">
+            <a href="#"><img class="srch-icon" src="img/search.png"></a>
+          </div>
+          <div id="navTab" style="margin:20px 10px 10px 10px !important;">          
+              <ul class="resp-tabs-list">
+                  <li><span class="font-blue font-small fwt-nor">CATEGORY 1</span><!-- <span class="clr-gry fwt-nor">Surprise a friend on their special day!</span> --></li>
+                  <li><span class="font-blue font-small fwt-nor">CATEGORY 2</span><!-- <span class="clr-gry fwt-nor">Say thanks to a friend who gifted you earlier!</span> --> </li>
+                  <li><span class="font-blue font-small fwt-nor">CATEGORY 3</span><!-- <span class="clr-gry fwt-nor">Those who've wishlisted this voucher </span> --></li>
+              </ul> 
+
+              <div class="resp-tabs-container">                                                        
+                  <div id="tab1"> 
+                    <ul style="list-style-type:none;">
+                      <li>
+                        <input type="radio" id="radio1" name="rad1">
+                        <label for="radio1" class="vmid">
+                          <table>
+                            <tr>
+                              <td rowspan="3">
+                                <img width="50" src="img/brand.png">
+                              </td>
+                              <td class="padL10"><span class="font-blue">NIKE</span></td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="font-blue font-bold">3</span> Vouchers, <span class="font-blue font-bold">Rs.500</span> each</td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="gry-hd">Expires:</span> Tomorrow</td>
+                            </tr>
+                          </table>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="radio" id="radio2" name="rad1">
+                        <label for="radio2" class="vmid">
+                          <table>
+                            <tr>
+                              <td rowspan="3">
+                                <img width="50" src="img/aap.png">
+                              </td>
+                              <td class="padL10"><span class="font-blue">APPLE</span></td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="font-blue font-bold">3</span> Vouchers, <span class="font-blue font-bold">Rs.500</span> each</td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="gry-hd">Expires:</span> Tomorrow</td>
+                            </tr>
+                          </table>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="radio" id="radio3" name="rad1">
+                        <label for="radio3" class="vmid">
+                          <table>
+                            <tr>
+                              <td rowspan="3">
+                                <img width="50" src="img/rupee.png">
+                              </td>
+                              <td class="padL10"><span class="font-blue">KALYAN</span></td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="font-blue font-bold">3</span> Vouchers, <span class="font-blue font-bold">Rs.500</span> each</td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="gry-hd">Expires:</span> Tomorrow</td>
+                            </tr>
+                          </table>
+                        </label>
+                      </li>
+                    </ul>
+                    <a href="#" id="lnk-more1" onclick="showPagination_tab1()" style="display:none;">Show more..</a>
+                    <div id="pagination-holder1" class="page-holder" align="center">
+                <ul class="pagination">
+                  <li>
+                    <a href="#">&nbsp;&nbsp;</a>
+                  </li>
+                  <li>
+                    <a href="#" class="pagination-active">1</a>
+                  </li>
+                  <li>
+                    <a href="#">2</a>
+                  </li>
+                  <li>
+                    <a href="#">3</a>
+                  </li>
+                  <li>
+                    <a href="#">&nbsp;&nbsp;</a>
+                  </li>
+                </ul>
+              </div>
+                  </div>
+                  <div id="tab2"> 
+                    <ul style="list-style-type:none;">
+                      <li>
+                        <input type="radio" id="radio4" name="rad1">
+                        <label for="radio4" class="vmid">
+                          <table>
+                            <tr>
+                              <td rowspan="3">
+                                <img width="50" src="img/brand.png">
+                              </td>
+                              <td class="padL10"><span class="font-blue">PUMA</span></td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="font-blue font-bold">3</span> Vouchers, <span class="font-blue font-bold">Rs.500</span> each</td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="gry-hd">Expires:</span> Tomorrow</td>
+                            </tr>
+                          </table>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="radio" id="radio5" name="rad1">
+                        <label for="radio5" class="vmid">
+                          <table>
+                            <tr>
+                              <td rowspan="3">
+                                <img width="50" src="img/aap.png">
+                              </td>
+                              <td class="padL10"><span class="font-blue">DELL</span></td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="font-blue font-bold">3</span> Vouchers, <span class="font-blue font-bold">Rs.500</span> each</td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="gry-hd">Expires:</span> Tomorrow</td>
+                            </tr>
+                          </table>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="radio" id="radio6" name="rad1">
+                        <label for="radio6" class="vmid">
+                          <table>
+                            <tr>
+                              <td rowspan="3">
+                                <img width="50" src="img/rupee.png">
+                              </td>
+                              <td class="padL10"><span class="font-blue">NOKIA</span></td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="font-blue font-bold">3</span> Vouchers, <span class="font-blue font-bold">Rs.500</span> each</td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="gry-hd">Expires:</span> Tomorrow</td>
+                            </tr>
+                          </table>
+                        </label>
+                      </li>
+                    </ul>
+                    <a href="#" id="lnk-more2" onclick="showPagination_tab2()" style="display:none;">Show more..</a>
+                    <div id="pagination-holder2" class="page-holder" align="center">
+                <ul class="pagination">
+                  <li>
+                    <a href="#">&nbsp;&nbsp;</a>
+                  </li>
+                  <li>
+                    <a href="#" class="pagination-active">1</a>
+                  </li>
+                  <li>
+                    <a href="#">&nbsp;&nbsp;</a>
+                  </li>
+                </ul>
+              </div>
+                  </div>
+                  <div id="tab3"> 
+                    <ul style="list-style-type:none;">
+                      <li>
+                        <input type="radio" id="radio7" name="rad1">
+                        <label for="radio7" class="vmid">
+                          <table>
+                            <tr>
+                              <td rowspan="3">
+                                <img width="50" src="img/brand.png">
+                              </td>
+                              <td class="padL10"><span class="font-blue">HCL</span></td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="font-blue font-bold">3</span> Vouchers, <span class="font-blue font-bold">Rs.500</span> each</td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="gry-hd">Expires:</span> Tomorrow</td>
+                            </tr>
+                          </table>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="radio" id="radio8" name="rad1">
+                        <label for="radio8" class="vmid">
+                          <table>
+                            <tr>
+                              <td rowspan="3">
+                                <img width="50" src="img/aap.png">
+                              </td>
+                              <td class="padL10"><span class="font-blue">VIRTUE</span></td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="font-blue font-bold">3</span> Vouchers, <span class="font-blue font-bold">Rs.500</span> each</td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="gry-hd">Expires:</span> Tomorrow</td>
+                            </tr>
+                          </table>
+                        </label>
+                      </li>
+                      <li>
+                        <input type="radio" id="radio9" name="rad1">
+                        <label for="radio9" class="vmid">
+                          <table>
+                            <tr>
+                              <td rowspan="3">
+                                <img width="50" src="img/rupee.png">
+                              </td>
+                              <td class="padL10"><span class="font-blue">RAYBAN</span></td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="font-blue font-bold">3</span> Vouchers, <span class="font-blue font-bold">Rs.500</span> each</td>
+                            </tr>
+                            <tr>
+                              <td class="padL10"><span class="gry-hd">Expires:</span> Tomorrow</td>
+                            </tr>
+                          </table>
+                        </label>
+                      </li>
+                    </ul>
+                    <a href="#" id="lnk-more3" onclick="showPagination_tab3()" style="display:none;">Show more..</a>
+                    <div id="pagination-holder3" class="page-holder" align="center">
+                <ul class="pagination">
+                  <li>
+                    <a href="#">&nbsp;&nbsp;</a>
+                  </li>
+                  <li>
+                    <a href="#" class="pagination-active">1</a>
+                  </li>
+                  <li>
+                    <a href="#">2</a>
+                  </li>
+                  <li>
+                    <a href="#">&nbsp;&nbsp;</a>
+                  </li>
+                </ul>
+              </div>
+                  </div>
+              </div>
+
+              <script type="text/javascript">
+                $(document).ready(function() {
+              $('input:radio[name=rad1]').each(function() {
+                  checked(this);
+              });
+
+            $('input:radio[name=rad1]').click(function() {
+                checked(this);
+            });
+
+            function checked(obj){
+                if($(obj).is(':checked')) {
+                    $('#btn-gift1').removeAttr('disabled');
+                }else{
+                    $('#btn-gift1').attr('disabled', 'true');
+                }
+              }
+          
+          });
+              </script>
+          
+            <div style="float:right;margin:10px 20px 10px 10px;">
+              <a href="#pop-leave-msg" id="btn-gift1" class="trig-leave-msg btn btn-lg btn-primary" disabled>Proceed</a>
+                <a href="#" class="btn btn-lg btn-default btn-def" onclick='parent.$.colorbox.close(); return false;'>Cancel</a>
+            </div>
+        
+        </div>
+      </div>
+    <!-- end pop select voucher to gift -->
+
+
+    <!-- pop leave msg-->
+    <div style="display:none;">
+      <div id="pop-leave-msg">
+        <div class="">
+                <form id="#form-contribute">
+                  <a href="#" onclick='parent.$.colorbox.close(); return false;'><img class="img-close" src="img/close.png"></a>
+                  <h3 class="gry-hd txtal-c">
+                    You have chosen to gift<br>
+                    <span class="font-blue">JEETU</span> with <span class="font-blue">NIKE</span>
+                  </h3>
+                  <div class="padT10" align="center"><span>You have <span class="font-blue">4 NIKE</span> vouchers worth <span class="font-blue">Rs.500</span> each</span><br><input type="text" placeholder="Enter number of vouchers to gift" style="margin:10px;width:225px;"></div>
+                  
+                  <br>
+                  <div class="font-blue" align="center">WRITE A PERSONALISED MESSAGE FOR JEETU!</div>
+                  <input class="contrib_placeholder" type="textarea" placeholder="">
+                  
+                  <hr>
+                  <div class="btn-grp" style="top:0px;">
+                    <a href="#" onclick='parent.$.colorbox.close(); return false;' class="btn btn-lg btn-default btn-def">Cancel</a>
+                    <a href="#pop-slct-frnd" class="trig-gift-vc btn btn-lg btn-default btn-def">Back</a>
+                    <span class="btn-shadow" style="width:auto;margin-left:0px !important;"><a href="#pop-confirm-msg" class="trig-confirm-msg btn btn-primary btn-lg">Send Gift</a></span>
+                  </div>
+                </form>
+              
+            </div>
+      </div>
+    </div>
+    <!-- end of pop leave msg-->
+
+    <!-- pop confirmation msg -->
+    <div style="display:none;">
+      <div id="pop-confirm-msg" align="center">
+          <h3 class="gry-hd">Congratulations!</h3>
+          <p class="">You have gifted</p>
+          <p class=""><span class="font-blue">4 NIKE</span> Vouchers</p>
+          <p class="">worth <span class="font-blue">Rs.500</span> to <span class="font-blue">JEETU</span></p>
+          <span class="btn-shadow" style="width:108px !important;margin-left:0px !important;">
+              <a href="#" onclick='parent.$.colorbox.close(); return false;' class="btn btn-lg btn-primary" style="padding:10px 35px;">Close</a>
+          </span>
+        </div>
+    </div>
+    <!-- end pop confirmation msg -->
+
+
     <br>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js">
     </script>
