@@ -87,7 +87,7 @@ height: 30px;
 .h-dash{display:inline;padding:10px 10px 10px 0px;white-space:nowrap;font-weight:bold;color: #000;}
 .navbar-dashboard{padding:15px;}
 .nav-btn-dashboard{float:right;}
-.active{border-color: #fff !important;background-color:rgba(255,255,255,0) !important;color:#fff !important;}
+
 /*.btn-shadow{box-shadow: 0px 10px 10px 0px rgba(34, 34, 34, 0.58); -moz-box-shadow: 0px 10px 10px 0px rgba(34, 34, 34, 0.58); -webkit-box-shadow: 0px 10px 10px 0px rgba(34, 34, 34, 0.58);}*/
 #footer{position: relative;margin: 20px 0px 10px 0px;bottom:0px;}
 /*.pagination{width:105%;}*/
@@ -143,10 +143,10 @@ body{margin-bottom:0px;}
 .pagination{margin: 5px 0px;}
 #footer a{white-space: nowrap;}
 
-.btn-chipped:hover{background-image: url(../img/bg-chipped.png);border-color: rgba(0,0,0,0);}
-.btn-chip-invites:hover{background-image: url(../img/bg-chip-invites.png);border-color: rgba(0,0,0,0);}
-.btn-start-chip:hover{background-image: url(../img/bg-start-chip.png);border-color: rgba(0,0,0,0);}
-.btn-all-events:hover{background-color: white;color:black;border-color: rgba(0,0,0,0);}
+.btn-chipped:hover, .btn-chipped.active{background-image: url(../img/bg-chipped.png) !important;border-color: rgba(0,0,0,0) !important;color: #fff !important;}
+.btn-chip-invites:hover, .btn-chip-invites.active{background-image: url(../img/bg-chip-invites.png)!important;border-color: rgba(0,0,0,0)!important;color: #fff !important;}
+.btn-start-chip:hover, .btn-start-chip.active{background-image: url(../img/bg-start-chip.png)!important;border-color: rgba(0,0,0,0)!important;color: #fff !important;}
+.btn-all-events:hover, .btn-all-events.active{background-color: #fff !important;color:#000;border-color: rgba(0,0,0,0)!important;}
 .h-dash{font-size: 25px;}
 
 
