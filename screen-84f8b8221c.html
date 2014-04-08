@@ -38,6 +38,8 @@
         // trigger to call "Leave a message" Pop-up window
         $(".trig-leave-msg").colorbox({inline:true});
         $(".trig-confirm-msg").colorbox({inline:true});
+        $(".lnk-showmore").colorbox({inline:true, width:"50%", height:"60%"});
+
       });
     </script>
     <script type="text/javascript">
@@ -321,19 +323,67 @@
                         <button id="btn-dismiss" type="button" class="btn btn-default btn-def btn-lg" onclick='parent.$.colorbox.close(); return false;'>Dismiss</button>
                       </div>
                       <div class="pop-event-friends-list">
-                        <p class="font-gray"><span class="font-black font-bold">10</span> <span class="font-gray">Friends Chipped In</span></p>
+                        <p class="font-gray"><span class="font-black font-bold">35</span> <span class="font-gray">Friends Chipped In</span></p>
                         <div class="img-small-viewport">
                           <img src="img/bale.png">
-                          <img src="img/bale.png">
-                          <img src="img/bale.png">
-                          <img src="img/bale.png">
-                          <img src="img/bale.png">
-                          <img src="img/bale.png">
-                          <img src="img/bale.png">
-                          <img src="img/bale.png">
-                          <img src="img/bale.png">
-                          <img src="img/bale.png">
+                          <!-- include initialized tooltips class or id -->
+                          <img src="img/bale.png" class="img-tooltip" data-toggle="tooltip" title="Christian Bale">
+                          <img src="img/bale.png" class="img-tooltip" data-toggle="tooltip" title="Bale">
+                          <img src="img/bale.png" class="img-tooltip" data-toggle="tooltip" title="John Turturro">
+                          <img src="img/bale.png" class="img-tooltip" data-toggle="tooltip" title="Sam">
+                          <img src="img/bale.png" class="img-tooltip" data-toggle="tooltip" title="Anderson">
+                          <img src="img/bale.png" class="img-tooltip" data-toggle="tooltip" title="Peter">
+                          <img src="img/bale.png" class="img-tooltip" data-toggle="tooltip" title="Christian Bale">
+                          <img src="img/bale.png" class="img-tooltip" data-toggle="tooltip" title="Christian Bale">
+                          <img src="img/bale.png" class="img-tooltip" data-toggle="tooltip" title="Christian Bale">
+                          <a class="lnk-showmore" href="#pop-morefriends" style="position:relative;top:10px;">and 25 others</a>
                         </div>
+
+                      </div>
+                    </div>
+                    <div style="display:none;">
+                      <div id="pop-morefriends">
+                        <a href="#pop_event" class="inline" style="float:right;position:relative;top:10px;right:10px;"><img src="img/close.png" style="width:15px !important;"></a>
+                        <table class="w100">
+                          <tr>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                          </tr>
+                          <tr>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                          </tr>
+                          <tr>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                          </tr>
+                          <tr>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                          </tr>
+                          <tr>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                            <td class="w20"><img src="img/bale.png"><br>Christian Bale</td>
+                          </tr>
+                        </table>
+                        <span class="btn-shadow floatr marT20 marR20" style="width:78px !important;">
+                          <a href="#pop_event" class="inline btn btn-lg btn-primary">Close</a>
+                        </span>
                       </div>
                     </div>
 
@@ -1538,5 +1588,10 @@
     <style type="text/css">
       /*.fb-share-button iframe{height: 30px !important;}*/
     </style>
+    <script type="text/javascript" src="js/tooltip.js"></script>
+    <script type="text/javascript">
+    //all tooltips should be given a class to initialize
+      $('.img-tooltip').tooltip();
+    </script>
   </body>
 </html>

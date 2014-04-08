@@ -428,3 +428,37 @@ label{
 .marL20{
   margin-left: 20px;
 }
+.w100{
+  width: 100%;
+}
+.w20{
+  width: 20%;
+}
+
+#pop-morefriends p, #pop-morefriends div, #pop-morefriends span, #pop-morefriends td{
+  color: #000;
+}
+#pop-morefriends img{
+  width: 50px;
+}
+#pop-morefriends > table > tbody > tr > td{
+  text-align: center;
+}
+.floatr{
+  float: right;
+}
+.marT20{
+  margin-top: 20px !important;
+}
+.marR20{
+  margin-right: 20px !important;
+}
+.dispInBlock{
+  display: inline-block;
+}
+.nowrap{
+  white-space: nowrap;
+}
+.vmid{
+  vertical-align: middle;
+}
